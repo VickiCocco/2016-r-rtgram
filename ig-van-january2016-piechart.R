@@ -10,7 +10,8 @@ p = ggplot(data=data3,
       ),
 ) 
 p=p + geom_bar(stat="identity", width = 1)
-p=p+facet_grid(facets=. ~ daynumber)
+p=p+facet_wrap(~daynumber, nrow=4)
+#p=p+facet_grid(facets=. ~ daynumber)
 p = p + coord_polar(theta="y")
  p = p + xlab('') +
 ylab('')
