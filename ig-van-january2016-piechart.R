@@ -8,11 +8,22 @@ p = ggplot(data=data3,
            y=colour,
            fill = I(data3$colour)
       ),
-) 
+) + theme_void()
 p=p + geom_bar(stat="identity", width = 1)
 p=p+facet_wrap(~daynumber, nrow=4)
 #p=p+facet_grid(facets=. ~ daynumber)
 p = p + coord_polar(theta="y")
  p = p + xlab('') +
-ylab('')
+     ylab('')
+# p = p + theme <- void()
+## p=p + theme(plot.background = element_rect(fill = "white"))
+## p= p + theme(
+##   panel.background = element_rect(fill = "white",
+##                                 colour = "white",
+##                                 size = 0.5, linetype = "solid"),
+##   panel.grid.major = element_line(size = 0.5, linetype = 'solid',
+##                                 colour = "white"), 
+##   panel.grid.minor = element_line(size = 0.25, linetype = 'solid',
+##                                 colour = "white")
+##   )
 ggsave("ig-van-january-2016-barchart.png", p, width = 26.666666667*2, height = 26.666666667*2, dpi = 72, limitsize = FALSE) # 26.6666667 = 1920/72dpi
