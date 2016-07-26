@@ -2,7 +2,11 @@
 R stuff for instagram vancouver 2016
 ## July 25, 2016
 
-1. today let's try theme_void() - it's great! removed all chrome! ![theme_void() small multiples vancouver 2016 january piechart](https://c1.staticflickr.com/9/8830/28270132710_2564fab5cb_d.jpg "theme_void() small multiples vancouver 2016 january piechart")
+today let's try theme_void() - it's great! removed all chrome!
+
+1. ```Rscript ig-van-january2016-piechart-as-barchart.R``` # output ig-van-january-2016-piechart-as-barchart.png
+1. ```mv ig-van-january-2016-barchart.png theme-void-ig-van-january-2016-barchart.png```
+![theme_void() small multiples vancouver 2016 january piechart](https://c1.staticflickr.com/9/8830/28270132710_2564fab5cb_d.jpg "theme_void() small multiples vancouver 2016 january piechart")
 
 ## July 23, 2016
 
