@@ -15,7 +15,6 @@ p=p+facet_wrap(~daynumber, nrow=4)
 p = p + coord_polar(theta="y")
  p = p + xlab('') +
      ylab('')
-# p = p + theme <- void()
 ## p=p + theme(plot.background = element_rect(fill = "white"))
 ## p= p + theme(
 ##   panel.background = element_rect(fill = "white",
