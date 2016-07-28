@@ -1,5 +1,8 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
+## July 27, 2016
+1. let's try hourly
+
 ## July 25, 2016
 
 today let's try theme_void() - it's great! removed all chrome!
