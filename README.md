@@ -1,7 +1,8 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 ## July 27, 2016
-1. let's try hourly
+1. let's try hourly ```Rscript ig-van-01january2016-piechart.R ```
+1. output: ig-van-01january-2016-barchart.png
 
 ## July 25, 2016
 
