@@ -1,5 +1,13 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
+
+## July 31, 2016 
+
+1. hourly failed but i got it working!
+1. ```Rscript scale-color-manual-first3-ig-van01january2016-piechart.R```
+more info:
+http://rolandtanglao.com/2016/07/31/p3-simplest-ggplot2-pie-chart-with-colors-as-bar-values-and-a-legend/
+
 ## July 27, 2016
 1. let's try hourly ```Rscript ig-van-01january2016-piechart.R ```
 1. output: ig-van-01january-2016-barchart.png
