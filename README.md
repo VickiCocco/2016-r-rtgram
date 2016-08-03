@@ -1,6 +1,9 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## August 1, 2016
+[How to make a named character vector in R](http://rolandtanglao.com/2016/08/01/p1-howto-named-character-vector/)
+
 ## July 31, 2016 
 
 1. hourly failed but i got it working!
