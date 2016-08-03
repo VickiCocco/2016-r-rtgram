@@ -2,7 +2,7 @@
 R stuff for instagram vancouver 2016
 
 ## August 1, 2016
-[How to make a named character vector in R](http://rolandtanglao.com/2016/08/01/p1-howto-named-character-vector/)
+[How to make a named character vector in R](http://rolandtanglao.com/2016/08/01/p1-howto-named-character-vector/) - useful if we ever want have a legend with colours in a pie chart.
 
 ## July 31, 2016 
 
