@@ -1,3 +1,4 @@
+# from http://poldham.github.io/ggplot_pizza_patents_part2j/
 library(ggplot2)
 data3 = read.csv(
   file="01january2016-1st3datapoints.csv", 
