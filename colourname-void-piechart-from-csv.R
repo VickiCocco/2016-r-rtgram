@@ -13,7 +13,7 @@ if(length(args) < 1) {
 if("--help" %in% args) {
   cat(" 
       Arguments:
-      what to grep for also what to name the file
+      CSV file with a column with colour with hex values for colours
       --help              - print this text 
       Example:
       Rscript void-piechart-from-csv R 001_ThuJan1.csv\n\n")
