@@ -10,6 +10,8 @@ R stuff for instagram vancouver 2016
 1. ```gm montage -verbose -adjoin -tile 7x6 +frame +shadow +label -adjoin -geometry '1920x1920+0+0<' null: null: null: null: null: @31pngs.txt null: null: null: null: null: null: 01-31january2016-piechart.png``` # Week starts on a Sunday and January 1 is a Friday so add 5 nulls at the beginning, January 31 is a Sunday so add 6 nulls at the end
 1. ```gm convert 01-31january2016-piechart.png 01-31january2016-piechart.jpg```# And post jpeg to flickr :-)
 
+### Output
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/roland/28202375273/in/dateposted-ff/" title="31 circles almost all alike :-) 31 jpegs fri jan 1 - sun jan 31 2016 instagram vancouver average colour pie charts 01-31january2016-piechart"><img src="https://c2.staticflickr.com/9/8889/28202375273_9d3d974548.jpg" width="500" height="429" alt="31 circles almost all alike :-) 31 jpegs fri jan 1 - sun jan 31 2016 instagram vancouver average colour pie charts 01-31january2016-piechart"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 ## August 1, 2016
 [How to make a named character vector in R](http://rolandtanglao.com/2016/08/01/p1-howto-named-character-vector/) - useful if we ever want have a legend with colours in a pie chart.
