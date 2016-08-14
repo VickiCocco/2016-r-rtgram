@@ -2,7 +2,12 @@
 R stuff for instagram vancouver 2016
 
 ## August 14, 2016
-Simplest possible square pie chart
+### Let's make 31 squre pie charts for january 2016
+
+1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016```
+1. ```ls -1 *-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv | xargs -n 1 Rscript ../colourname-void-square-piechart-from-csv.R ```
+
+### Simplest possible square pie chart
 
 1. ```Rscript first3-ig-van-01january2016-square-piechart.R``` # theme_void doesn't work, gives us 1 colour only!
 1.  ```open 1st3-ig-van-01january-2016-squarepiechart.png```
