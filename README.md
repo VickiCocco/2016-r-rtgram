@@ -6,7 +6,9 @@ Simplest possible square pie chart
 
 1. ```Rscript first3-ig-van-01january2016-square-piechart.R``` # theme_void doesn't work, gives us 1 colour only!
 1.  ```open 1st3-ig-van-01january-2016-squarepiechart.png```
-  
+output:
+![simplest possible square pie chart](https://github.com/rtanglao/2016-r-rtgram/blob/master/1st3-ig-van-01january-2016-squarepiechart.png
+)
 ## August 6, 2016
 
 1. ```mkdir JANUARY 2016; cd !$; cp ../january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv .```
