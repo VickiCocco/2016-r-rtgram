@@ -1,6 +1,15 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## August 28, 2016
+
+31 faceted square piecharts just to see how bad the layout will be :-)
+
+1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016```
+1. ```../faceted-by-daynumber-colourname-void-square-piechart-from-csv.R january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv```
+1. Use iron() to display all 31? Because it doesn't work, maybe [because faceting isn't supported](https://github.com/hrbrmstr/waffle/issues/24)?: ```Error in layout_base(data, vars, drop = drop) : 
+  At least one layer must contain all variables used for facetting```
+
 ## August 14, 2016
 ### Let's make 31 square pie charts for january 2016
 
