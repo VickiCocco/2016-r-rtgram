@@ -3,7 +3,12 @@ R stuff for instagram vancouver 2016
 
 ## August 28, 2016
 
-31 faceted square piecharts just to see how bad the layout will be :-)
+### 1st2500:
+
+1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016```
+1. ```ls -1 *-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv | xargs -n 1 Rscript ../first2500-colourname-void-square-piechart-from-csv.R `
+
+### 31 faceted square piecharts just to see how bad the layout will be :-)
 
 1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016```
 1. ```../faceted-by-daynumber-colourname-void-square-piechart-from-csv.R january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv```
