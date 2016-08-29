@@ -6,7 +6,12 @@ R stuff for instagram vancouver 2016
 ### 1st2500:
 
 1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016```
-1. ```ls -1 *-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv | xargs -n 1 Rscript ../first2500-colourname-void-square-piechart-from-csv.R `
+1. ```ls -1 *-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv | xargs -n 1 Rscript ../first2500-colourname-void-square-piechart-from-csv.R ```
+1. trim off white space: ```mkdir FIRST2500-TRIMMED``` 
+1. ```parallel convert -trim '{}' 'FIRST2500-TRIMMED/{}' ::: first2500*.png```
+citation: O. Tange (2011): GNU Parallel - The Command-Line Power Tool,
+  ;login: The USENIX Magazine, February 2011:42-47.
+actually the above is wrong because convert -trim truncates white columns, ok then we should use 1026x475px not trim
 
 ### 31 faceted square piecharts just to see how bad the layout will be :-)
 
