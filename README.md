@@ -1,6 +1,10 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## August 30, 2016 
+### Creating 6 point square piechart
+1. ```Rscript first6-ig-van-01january2016-square-piechart.R```
+
 ## August 28, 2016
 
 ### 1st2500:
