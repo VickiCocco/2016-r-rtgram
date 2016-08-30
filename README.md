@@ -4,6 +4,8 @@ R stuff for instagram vancouver 2016
 ## August 30, 2016 
 ### Creating 6 point square piechart
 1. ```Rscript first6-ig-van-01january2016-square-piechart.R```
+<br />output:
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/roland/29056444650/in/dateposted-ff/" title="6datapoints-squarepiechart"><img src="https://c3.staticflickr.com/9/8309/29056444650_5624472f95.jpg" width="500" height="500" alt="6datapoints-squarepiechart"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 ## August 28, 2016
 
