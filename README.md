@@ -2,6 +2,9 @@
 R stuff for instagram vancouver 2016
 
 ## August 30, 2016 
+### Let's make 1000 square graphs
+1. use cumsum to compute a cumulative sum column  ``sept01countcolourname$numphotos <- cumsum(sept01countcolourname$freq)```
+1. then use head with a conditional on the cumulative sum get first 2000 ```subset(sept01countcolourname, sept01countcolourname$numphotos <2001)```
 ### Let's make 2500 photos NOT 2501 31 square pie charts for january 2016
 * fixed bug changed 2501 to 2500!
 
