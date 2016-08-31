@@ -2,6 +2,12 @@
 R stuff for instagram vancouver 2016
 
 ## August 30, 2016 
+### Let's make 2500 photos NOT 2501 31 square pie charts for january 2016
+* fixed bug changed 2501 to 2500!
+
+1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016```
+1. ``````ls -1 *-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv | xargs -n 1 Rscript ../first2500-colourname-void-square-piechart-from-csv.R```
+1. ```parallel convert -trim '{}' 'FIRST2500-TRIMMED/{}' ::: first2500*.png```
 ### Creating 6 point square piechart
 1. ```Rscript first6-ig-van-01january2016-square-piechart.R```
 <br />output:

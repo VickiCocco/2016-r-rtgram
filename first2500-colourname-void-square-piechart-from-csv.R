@@ -2,6 +2,7 @@ library(ggplot2)
 library(plotrix)
 library(plyr)
 library(waffle)
+library(grid)
 
 tc <-
      function(x) {
@@ -23,16 +24,33 @@ if("--help" %in% args) {
   q(save="no")
 }
 data3 = read.csv(file=args[1], stringsAsFactors=F)
-data3 = head(data3,2501)
+data3 = head(data3,2500)
 
 data3$colourname <- sapply(data3$colour, tc)
 
 countcolourname = count(data3, "colourname")
 countcolourname <- countcolourname[order(-countcolourname$freq),]
+#sum(countcolourname$freq)
+#head(countcolourname,10)
 
 colour_vector2 <-setNames(countcolourname$freq, countcolourname$colourname)
+colour_vector2
+sum(colour_vector2)
 
-p = waffle(colour_vector2, rows=25, size= 0.5, colors = countcolourname$colourname) + theme_void() + theme(legend.position="none")
+p = waffle(colour_vector2, rows=25, size= 0.5, colors = countcolourname$colourname) +
+    # theme_void() +
+        #theme(legend.title = element_blank()) +
+# Remove the plot legend
+ theme(legend.position="none") +
+       # theme(legend.justification=c(1,0), legend.position=c(1,0)) +
+    #theme(legend.position="none") +
+     labs(x=NULL, y=NULL) +
+         # theme(plot.margin = unit(c(0,0,0,0), "mm")) + 
+         theme(plot.margin=grid::unit(c(0,0,0,0), "mm")) +
+         theme(axis.title.x=element_blank()) +
+             theme(axis.title.y=element_blank())+
+            guides(fill=FALSE)
 
-ggsave(paste0("first2500-square-piechart-colourname-",gsub("csv", "png", basename(args[1]))), p, width = 26.666666667, height = 26.666666667, dpi = 72, limitsize = FALSE) # 26.6666667 = 1920/72dpi
+ggsave(paste0("first2500-square-piechart-colourname-",gsub("csv", "png", basename(args[1]))), p,
+       width = 14.25, height = 6.66667, dpi = 72, limitsize = FALSE) #multiply height and width by dpi to get px
 warnings()
