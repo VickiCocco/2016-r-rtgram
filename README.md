@@ -1,6 +1,12 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## August 31, 2016 
+
+1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/SIZE0.1```
+1. ```ls -1 ../*-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv | xargs -n 1 Rscript ../../size0.1.-first2500-void-square-piechart-from-csv.R```
+1. ```parallel convert -trim '{}' 'TRIMMED/{}' ::: first2500-size0*.png```
+
 ## August 30, 2016 
 ### Let's make 1000 square graphs
 1. use cumsum to compute a cumulative sum column  ``sept01countcolourname$numphotos <- cumsum(sept01countcolourname$freq)```
