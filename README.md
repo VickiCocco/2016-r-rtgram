@@ -3,6 +3,13 @@ R stuff for instagram vancouver 2016
 
 ## August 31, 2016 
 
+### Let's try 0.1 and divide by 10
+
+1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/DIV10-SIZE0.1```
+1. ```ls -1 ../*-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv | xargs -n 1 Rscript ../../div10-size0.1-first2500-void-dquare-piechart-from-csv.R```
+
+### Tried 0.1 it's better but still missing some datapoints
+
 1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/SIZE0.1```
 1. ```ls -1 ../*-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv | xargs -n 1 Rscript ../../size0.1.-first2500-void-square-piechart-from-csv.R```
 1. ```parallel convert -trim '{}' 'TRIMMED/{}' ::: first2500-size0*.png```
