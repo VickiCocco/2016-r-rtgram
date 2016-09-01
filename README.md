@@ -3,6 +3,12 @@ R stuff for instagram vancouver 2016
 
 ## August 31, 2016 
 
+### Cumulative sum 1000
+1. ```/Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/CUMULATIVE-SUM-1000```
+1. ```mkdir TRIMMED```
+1.  ```ls -1 ../*-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv | xargs -n 1 Rscript ../../cumulativesum-size0.1-first2500-void-square-piechart-from-csv.R```
+1. ```parallel convert -trim '{}' 'TRIMMED/{}' ::: cumulative-sum*.png```
+
 ### Let's try 0.1 and divide by 5
 1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/DIV5-SIZE0.1```
 1. ```mkdir TRIMMED```
