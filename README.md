@@ -4,10 +4,16 @@ R stuff for instagram vancouver 2016
 ## August 31, 2016 
 
 ### Cumulative sum 1000
+Algorithm: take 1st 2500 photos, get colournames, sort by descending frequency of colournames and then take the first 1000 photos to form a square pie chart graph of <=1000 squares
+
 1. ```/Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/CUMULATIVE-SUM-1000```
 1. ```mkdir TRIMMED```
 1.  ```ls -1 ../*-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv | xargs -n 1 Rscript ../../cumulativesum-size0.1-first2500-void-square-piechart-from-csv.R```
-1. ```parallel convert -trim '{}' 'TRIMMED/{}' ::: cumulative-sum*.png```
+1. ```parallel convert -trim '{}' 'TRIMMED/{}' ::: cumulative-sum*.png``` # results in 750x480 and 768x480 png
+1. ```cd TRIMMED; ls -1 >31pngs.txt```
+1. ```gm montage -verbose -adjoin -tile 7x6 +frame +shadow +label -adjoin -geometry '768x480+0+0<' null: null: null: null: null: @31pngs.txt null: null: null: null: null: null: ig-van-2016-top2500-topcolour-sorted-1000-squares-01-31january2016-square-piechart.png```
+1. ```gm montage -verbose -adjoin -tile 7x6 +frame +shadow +label -adjoin -geometry '750x480+0+0<' null: null: null: null: null: @31pngs.txt null: null: null: null: null: null: 750-ig-van-2016-top2500-topcolour-sorted-1000-squares-01-31january2016-square-piechart.png```
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/roland/29341985206/in/dateposted-ff/" title="768-ig-van-2016-top2500-topcolour-sorted-1000-squares-01-31january2016-square-piechart"><img src="https://c7.staticflickr.com/9/8827/29341985206_f7eccf9b09.jpg" width="500" height="268" alt="768-ig-van-2016-top2500-topcolour-sorted-1000-squares-01-31january2016-square-piechart"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 ### Let's try 0.1 and divide by 5
 1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/DIV5-SIZE0.1```
