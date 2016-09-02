@@ -1,6 +1,10 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## September 1, 2016
+### Write a test case for waffle()
+pseudo code: pass in number of squares as a command line argument, do (2500-1000)/2 + 1000 i.e. a binary search for where it breaks startg with 1750
+
 ## August 31, 2016 
 
 ### Cumulative sum 1000
