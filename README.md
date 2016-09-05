@@ -2,9 +2,12 @@
 R stuff for instagram vancouver 2016
 
 ## September 5, 2016
-### Do 3000 first photos square pie charts for January 1-31, 2016
+### Do 3000 first photos instagram vancouver average colour square pie charts for January 1-31, 2016
 
 1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/FIXED-WAFFLE-3000```
+1. ```parallel Rscript ../../file-numphotos-square-piechart.R '{}' 3000 ::: ../*-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv```
+1. ```mkdir TRIMMED```
+1. ```parallel convert -trim '{}' 'TRIMMED/{}' ::: 3000*.png```
 
 ### waffle() doesn't work if you have more than 25 levels in your square piechart
 The solution which I still haven't tested:
