@@ -1,6 +1,18 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## September 5, 2016
+### waffle() doesn't work if you have more than 25 levels in your square piechart
+The solution which I still haven't tested:
+
+```R
+letters658 = make.unique(rep(letters, length.out = 658), sep='') #use letters658 instead of LETTERS R constant
+```
+
+The above code makes up for the R constant ```LETTERS``` only having 26 levels when R has 657 colours (add 1 since
+waffle() starts at 'B' instead of 'A'). So having 657 letters will allow all R colours to be plotted safely instead of any colour beyond the 
+first 26 being turned into 'not a number' i.e. ```NA```.
+
 ## September 1, 2016
 ### Write a test case for waffle()
 pseudo code: pass in number of squares as a command line argument, do (2500-1000)/2 + 1000 i.e. a binary search for where it breaks startg with 1750
