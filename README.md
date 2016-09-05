@@ -8,6 +8,9 @@ R stuff for instagram vancouver 2016
 1. ```parallel Rscript ../../file-numphotos-square-piechart.R '{}' 3000 ::: ../*-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv```
 1. ```mkdir TRIMMED```
 1. ```parallel convert -trim '{}' 'TRIMMED/{}' ::: 3000*.png```
+1. ```cd TRIMMED```
+1. ```ls -1 3000*.png  >31pngs.txt```
+1. ```gm montage -verbose -adjoin -tile 7x6 +frame +shadow +label -adjoin -geometry '1023x308+0+0<' null: null: null: null: null: @31pngs.txt null: null: null: null: null: null: ig-van-2016-top3000-topcolour-sorted-3000-squares-01-31january2016-square-piechart.png```
 
 ### waffle() doesn't work if you have more than 25 levels in your square piechart
 The solution which I still haven't tested:
