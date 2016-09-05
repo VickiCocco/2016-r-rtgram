@@ -12,6 +12,8 @@ R stuff for instagram vancouver 2016
 ### waffle() doesn't work if you have more than 25 levels in your square piechart
 The solution which I still haven't tested:
 
+From [stack overflow repeating vector of letters](http://stackoverflow.com/questions/21681785/repeating-vector-of-letters):
+
 ```R
 letters658 = make.unique(rep(letters, length.out = 658), sep='') #use letters658 instead of LETTERS R constant
 ```
