@@ -2,6 +2,10 @@
 R stuff for instagram vancouver 2016
 
 ## September 5, 2016
+### Do 3000 first photos square pie charts for January 1-31, 2016
+
+1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/FIXED-WAFFLE-3000```
+
 ### waffle() doesn't work if you have more than 25 levels in your square piechart
 The solution which I still haven't tested:
 
