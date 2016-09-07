@@ -1,6 +1,12 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## September 6, 2016
+
+1. What shall I do next besides the pull request for waffle and/or the github issue?:
+    1. Maybe average colour over each day and then do a June 1-May 27, 2016 graphic?
+    1. Maybe train a neural network with the likes (weight 0.5), comments (weight 1.0) with my instagram photos from 2014-2016?
+
 ## September 5, 2016
 ### Do 3000 first photos instagram vancouver average colour square pie charts for January 1-31, 2016
 
