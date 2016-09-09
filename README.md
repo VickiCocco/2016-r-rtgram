@@ -1,6 +1,12 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## September 8, 2016
+### 24 square plan
+1. for each day.csv
+    1. loop over all 24 hours (do i really need a loop? probably not)
+    1. get that hour's subset from the CSV file, average the subset, add the average to the dataframe
+
 ## September 6, 2016
 
 1. What shall I do next besides the pull request for waffle and/or the github issue?:
