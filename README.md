@@ -5,7 +5,9 @@ R stuff for instagram vancouver 2016
 ### 24 square plan
 1. for each day.csv
     1. loop over all 24 hours (do i really need a loop? probably not)
-    1. get that hour's subset from the CSV file, average the subset, add the average to the dataframe
+    1. get that hour's subset from the CSV file, average the subset, add the average to that hour's dataframe
+	1. add colourname to the hour's dataframe and the graph the hour's dataframe
+	
 
 ## September 6, 2016
 
