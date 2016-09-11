@@ -1,6 +1,10 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+### September 11, 2016
+
+Put the [january 1-31, 2016 github dataset up on octopub](https://rtanglao.github.io/january-1-31-2016-instagram-vancouver-metadata-including-average-colour-hour-day-unixtime/) (which is on github!)
+
 ## September 8, 2016
 ### 24 square plan
 1. for each day.csv
