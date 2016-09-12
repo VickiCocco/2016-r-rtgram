@@ -195,55 +195,41 @@ getcolour_for_hour <- function(df, hh) {
   red = 255 * (sum(hour_subset$linear_colour_matrix[[1]][1])/nrow(hour_subset))^(1.0/2.2) 
   green = 255 * (sum(hour_subset$linear_colour_matrix[[1]][2])/nrow(hour_subset))^(1.0/2.2) 
   blue = 255* (sum(hour_subset$linear_colour_matrix[[1]][3])/nrow(hour_subset))^(1.0/2.2) 
-  return (tc(round(red*65536.0) + round(blue * 256.0) + round(blue)))
+  return (tc(round((red*65536.0) + (blue * 256.0) + blue)))
 }
 
 main <- function() {
   data3 = read.csv(file = args[1], stringsAsFactors = F)
 
   data3$linear_colour_matrix <- lapply(data3$colour, get_linear)
-  # zero_hour_subset = subset(data3, hour == 0)
-  # #print(zero_hour_subset)
-  # red = 255 * (sum(zero_hour_subset$linear_colour_matrix[[1]][1])/nrow(zero_hour_subset))^(1.0/2.2) # red
-  # green = 255 * (sum(zero_hour_subset$linear_colour_matrix[[1]][2])/nrow(zero_hour_subset))^(1.0/2.2) # green
-  # blue = 255* (sum(zero_hour_subset$linear_colour_matrix[[1]][3])/nrow(zero_hour_subset))^(1.0/2.2) # blue
+  df <- data.frame(colourname = character(24), stringsAsFactors = FALSE)
   for (i in 0:23) {
-    print(getcolour_for_hour(data3, i))
+    colourname = getcolour_for_hour(data3, i)
+    df$colourname[i+1] <- colourname
   }
   
-  # data3$colourname <- sapply(data3$colour, tc)
-  # 
-  # countcolourname = count(data3, "colourname")
-  # countcolourname <- countcolourname[order(-countcolourname$freq), ]
-  # 
-  # colour_vector2 <- setNames(countcolourname$freq, countcolourname$colourname)
-  # print(colour_vector2)
-  # print(sum(colour_vector2))
-  # magic_row_size_number = 100
-  # 
-  # numrows = numphotos %/% magic_row_size_number
-  # if (numrows == 0) {
-  #   numrows = 1
-  # }
-  # else if ((numphotos %% magic_row_size_number) != 0) {
-  #   numrows = numrows + 1
-  # }
-  # print (numrows)
-  # print(countcolourname$colourname)
-  # p = roland_waffle(
-  #   colour_vector2,
-  #   rows = numrows,
-  #   size = 1.0,
-  #   colors = countcolourname$colourname) +
-  #   theme(legend.position = "none") 
-  # 
-  # filename = sprintf("%4.4d-%s", numphotos, gsub("csv", "png", basename(args[1])))
-  # ggsave(filename,
-  #        p,
-  #        width = 14.222222222,
-  #        height =10.666666667,
-  #        dpi = 72,
-  #        limitsize = FALSE) #multiply height and width by dpi to get px
+  print (df)
+  
+  countcolourname = count(df, "colourname")
+  countcolourname <- countcolourname[order(-countcolourname$freq), ]
+  
+  colour_vector2 <- setNames(countcolourname$freq, countcolourname$colourname)
+  print(colour_vector2)
+  print(sum(colour_vector2))
+  p = roland_waffle(
+    colour_vector2,
+    rows = 4,
+    size = 1.0,
+    colors = countcolourname$colourname) +
+    theme(legend.position = "none")
+
+  filename = sprintf("24squares-per-hour-%s", gsub("csv", "png", basename(args[1])))
+  ggsave(filename,
+         p,
+         width = 14.222222222,
+         height =10.666666667,
+         dpi = 72,
+         limitsize = FALSE) #multiply height and width by dpi to get px
 }
 
 sink("log.txt")
