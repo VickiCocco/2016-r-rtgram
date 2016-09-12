@@ -6,6 +6,7 @@ R stuff for instagram vancouver 2016
 ### 24 squares per day
 1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/24SQUARES-PER-DAY```
 2. ```parallel Rscript ../../twenty-four-square-pie-chart-from-csv.R '{}' ::: ../??-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv```
+
 ### Dataset for January 2016 on octopub
 
 Put the [january 1-31, 2016 github dataset up on octopub](https://rtanglao.github.io/january-1-31-2016-instagram-vancouver-metadata-including-average-colour-hour-day-unixtime/) (which is on github!)
