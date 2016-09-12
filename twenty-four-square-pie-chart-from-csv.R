@@ -193,18 +193,14 @@ if ("--help" %in% args) {
 
 main <- function() {
   data3 = read.csv(file = args[1], stringsAsFactors = F)
-  #print(data3)
-  
+
   data3$linear_colour_matrix <- lapply(data3$colour, get_linear)
   zero_hour_subset = subset(data3, hour == 0)
-  #str(zero_hour_subset$linear_colour_matrix[1])
-  #print(zero_hour_subset$linear_colour_matrix[["red"]])
-  print(zero_hour_subset)
-  #print(zz$linear_colour_matrix[[1]][1])
-  #str(zz$linear_colour_matrix)
-  print(sum(zero_hour_subset$linear_colour_matrix[[1]][1])/length(zero_hour_subset)) # red
-  print(sum(zero_hour_subset$linear_colour_matrix[[1]][2])/length(zero_hour_subset)) # green
-  print(sum(zero_hour_subset$linear_colour_matrix[[1]][3])/length(zero_hour_subset)) # blue
+  #print(zero_hour_subset)
+  red = 255 * (sum(zero_hour_subset$linear_colour_matrix[[1]][1])/nrow(zero_hour_subset))^(1.0/2.2) # red
+  green = 255 * (sum(zero_hour_subset$linear_colour_matrix[[1]][2])/nrow(zero_hour_subset))^(1.0/2.2) # green
+  blue = 255* (sum(zero_hour_subset$linear_colour_matrix[[1]][3])/nrow(zero_hour_subset))^(1.0/2.2) # blue
+  print(tc(round(red*65536.0) + round(blue * 256.0) + round(blue)))
   
   # data3$colourname <- sapply(data3$colour, tc)
   # 
