@@ -12,6 +12,10 @@ R stuff for instagram vancouver 2016
 1. ```ls -1 *.png  >31pngs.txt```
 1. ```gm montage -verbose -adjoin -tile 7x6 +frame +shadow +label -adjoin -geometry '1023x684+0+0<' null: null: null: null: null: @31pngs.txt null: null: null: null: null: null: ig-van-2016-one-top-colour-square-per-hour-01-31january2016-square-piechart.png```
 
+### Here's how the 24 squares per day looks!
+
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/roland/29008995333/in/dateposted-ff/" title="ig-van-2016-one-top-colour-square-per-hour-01-31january2016-square-piechart"><img src="https://c6.staticflickr.com/9/8139/29008995333_1881d310f8.jpg" width="500" height="287" alt="ig-van-2016-one-top-colour-square-per-hour-01-31january2016-square-piechart"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
 
 ### Dataset for January 2016 on octopub
 
