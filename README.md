@@ -6,6 +6,12 @@ R stuff for instagram vancouver 2016
 ### 24 squares per day
 1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/24SQUARES-PER-DAY```
 2. ```parallel Rscript ../../twenty-four-square-pie-chart-from-csv.R '{}' ::: ../??-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv```
+3. ```mkdir TRIMMED```
+1. ```parallel convert -trim '{}' 'TRIMMED/{}' ::: *.png```
+1. ```cd TRIMMED```
+1. ```ls -1 *.png  >31pngs.txt```
+1. ```gm montage -verbose -adjoin -tile 7x6 +frame +shadow +label -adjoin -geometry '1023x684+0+0<' null: null: null: null: null: @31pngs.txt null: null: null: null: null: null: ig-van-2016-one-top-colour-square-per-hour-01-31january2016-square-piechart.png```
+
 
 ### Dataset for January 2016 on octopub
 
