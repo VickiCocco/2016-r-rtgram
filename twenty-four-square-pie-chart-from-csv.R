@@ -153,17 +153,6 @@ roland_waffle <-
     gg <- gg + theme(legend.position = legend_pos)
     gg
   }
-list <- structure(NA,class="result")
-"[<-.result" <- function(x,...,value) {
-  args <- as.list(match.call())
-  args <- args[-c(1:2,length(args))]
-  length(value) <- length(args)
-  for(i in seq(along=args)) {
-    a <- args[[i]]
-    if(!missing(a)) eval.parent(substitute(a <- v,list(a=a,v=value[[i]])))
-  }
-  x
-}
 get_linear <- function(colour) {
   colour_matrix <- col2rgb(colour)
   linear_colour_matrix <- (colour_matrix / 255.0) ^ 2.2
