@@ -1,7 +1,27 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
-### September 11, 2016
+## July 24, 2017
+* 1\. [average-colour-by-hour-ggjoy-from-csv.R not working](https://github.com/rtanglao/2016-r-rtgram/blob/master/average-colour-by-hour-ggjoy-from-csv.R)
+```bash
+Rscript ../average-colour-by-hour-ggjoy-from-csv.R 31-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour.csv 
+Error in FUN(X[[i]], ...) : need at least 2 data points
+Calls: main ... <Anonymous> -> f -> <Anonymous> -> f -> vapply -> FUN
+Execution halted
+```
+* 2\.But I have two data points! namely for example the first 6 rows I have 3 rows with ```indianred4```
+```
+ colour                             id dayofweek.month.dayofmonth daynumber   unixtime  hour colourname
+    <chr>                          <chr>                      <chr>     <int>      <int> <int>      <chr>
+1 #546363 1174465369140103047_2176611536                   SunJan31        31 1454227203     0     gray37
+2 #ACA8A8 1174465451560169285_2137478482                   SunJan31        31 1454227213     0   darkgray
+3 #6B3434 1174465462824925338_2250967365                   SunJan31        31 1454227215     0 indianred4
+4 #4B3E3E  1174465565628114803_177763144                   SunJan31        31 1454227227     0     gray26
+5 #803A3A  1174465617924150379_361059564                   SunJan31        31 1454227233     0 indianred4
+6 #704141 1174465676122308807_1537167607                   SunJan31        31 1454227240     0 indianred4
+```
+
+## September 11, 2016
 
 ### 24 squares per day
 1. ```cd /Users/rtanglao/Dropbox/GIT/2016-r-rtgram/JANUARY2016/24SQUARES-PER-DAY```
