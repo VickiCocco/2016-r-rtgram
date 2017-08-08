@@ -9,6 +9,12 @@ R stuff for instagram vancouver 2016
 cd JANUARY2016
 Rscript ../part2-create-csv-ig-van-average-colour-jan2016.R
 ```
+* 4\. Create part 3 naive scatterplot, 
+output file is: ```part3-naive-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour-colourname.png```
+```bash
+Rscript ../part3-create-naive-scatterplot-colourname-hour.R
+```
+
 ## July 24, 2017
 * 1\. [average-colour-by-hour-ggjoy-from-csv.R not working](https://github.com/rtanglao/2016-r-rtgram/blob/master/average-colour-by-hour-ggjoy-from-csv.R)
 ```bash
