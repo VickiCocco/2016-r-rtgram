@@ -4,7 +4,7 @@ csv_url = "https://raw.githubusercontent.com/rtanglao/2016-r-rtgram/master/JANUA
 average_colour_ig_van_jan2016_colourname = read_csv(csv_url)
 plot =
     ggplot(data=average_colour_ig_van_jan2016_colourname)+
-    geom_point(size=10,colour=average_colour_ig_van_jan2016_colourname$colourname,
+    geom_point(size=20,colour=average_colour_ig_van_jan2016_colourname$colourname,
                mapping = aes(x = hour, y=colourname)) +
     theme_void() +
     theme(legend.position = 'none') +
