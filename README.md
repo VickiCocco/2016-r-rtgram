@@ -21,7 +21,7 @@ Rscript ../part4-create-colourname-with-colourname-aesthetic-scatterplot-hour.R
 ```
 
 Here's the part 4 output:<br />
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/roland/35629942613/in/dateposted-ff/" title="part4-colourname-aesthetic-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour-colourname"><img src="https://farm5.staticflickr.com/4416/35629942613_f1896066a1.jpg" width="500" height="272" alt="part4-colourname-aesthetic-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour-colourname"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a href="https://www.flickr.com/photos/roland/35629942613/"><img src="https://c1.staticflickr.com/5/4416/35629942613_f1896066a1_n.jpg"></a>
 
 ## July 24, 2017
 * 1\. [average-colour-by-hour-ggjoy-from-csv.R not working](https://github.com/rtanglao/2016-r-rtgram/blob/master/average-colour-by-hour-ggjoy-from-csv.R)
