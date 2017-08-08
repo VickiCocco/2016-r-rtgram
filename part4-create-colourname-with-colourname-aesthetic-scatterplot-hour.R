@@ -13,4 +13,4 @@ filename = "part4-colourname-aesthetic-january2016-ig-van-avgcolour-id-mf-month-
          dpi = 72,
          limitsize = FALSE,
          bg = "transparent"
-         ) #multiply height and width by dpi to get px of 16800*2093
+         ) #multiply height and width by dpi to get px 
