@@ -14,6 +14,11 @@ output file is: ```part3-naive-january2016-ig-van-avgcolour-id-mf-month-day-dayn
 ```bash
 Rscript ../part3-create-naive-scatterplot-colourname-hour.R
 ```
+* 5\. Create part 5 with the dots of the scatterplot coloured like colourname i.e. ```geom_point``` uses the colour name literally (if you put the colour name in ```aes``` it will map the colour name to a level!)
+output file is: ```part4-colourname-aesthetic-january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour-colourname.png```
+```bash
+Rscript ../part4-create-colourname-with-colourname-aesthetic-scatterplot-hour.R
+```
 
 ## July 24, 2017
 * 1\. [average-colour-by-hour-ggjoy-from-csv.R not working](https://github.com/rtanglao/2016-r-rtgram/blob/master/average-colour-by-hour-ggjoy-from-csv.R)
