@@ -4,9 +4,10 @@ R stuff for instagram vancouver 2016
 ## August 7, 2017
 * 1\. Giving up on ggjoy for now :-)
 * 2\. Back to first principles of R and the tidyverse: http://rolandtanglao.com/2017/08/07/p1-mpg-scatterplot-average-colour-instagram-r-data-science/
-* 3\. Create January 1-31, 2016 instagram vancouver CSV with colournames, output file is: https://github.com/rtanglao/2016-r-rtgram/blob/master/january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour-colourname.csv :
+* 3\. Create January 1-31, 2016 instagram vancouver CSV with colournames, output file is: https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour-colourname.csv:
 ```bash
-Rscript part2-create-csv-ig-van-average-colour-jan2016.R
+cd JANUARY2016
+Rscript ../part2-create-csv-ig-van-average-colour-jan2016.R
 ```
 ## July 24, 2017
 * 1\. [average-colour-by-hour-ggjoy-from-csv.R not working](https://github.com/rtanglao/2016-r-rtgram/blob/master/average-colour-by-hour-ggjoy-from-csv.R)
