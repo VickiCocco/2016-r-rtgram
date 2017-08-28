@@ -1,6 +1,16 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## August 28, 2017
+* 1\. AES maps but doesn't SET part 8888 :-) the colour instead it maps the variable, in this case colourname, to a set of levels and the levels are mapped to a default colour palette i.e. the plot shows up not in the colours of colourname but in the default colour palette! Code:
+```
+ggplot(average_colour_ig_van_jan2016_colourname,
+aes(colourname, colour=colourname)) + geom_density()
+```
+
+And here's how it looks
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/roland/36046136364/in/datetaken/" title="ggplot(average_colour_ig_van_jan2016_colourname, aes(colourname, colour&#x3D;colourname)) + geom_density()-mapping-colourname-instead-of-plotting-colourname"><img src="https://farm5.staticflickr.com/4378/36046136364_6fe52d956e_n.jpg" width="320" height="198" alt="ggplot(average_colour_ig_van_jan2016_colourname, aes(colourname, colour&#x3D;colourname)) + geom_density()-mapping-colourname-instead-of-plotting-colourname"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
 ## August 20, 2017
 
 Blogged here: http://rolandtanglao.com/2017/08/20/p1-naive-density-plot-instagram-vancouver-average-colour-january-2016/
@@ -15,7 +25,7 @@ ggplot(average_colour_ig_van_jan2016_colourname,
 aes(colourname)) + geom_density()
 ```
 
-* \2. And here is the output (I used R Studio to make the output PNG 9740 x 6020 px) on flickr (on github: [pdf](https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/naive-density-plot-instagram-vancouver-jan2016-averagecolour-colourname.pdf), [png](https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/naive-density-plot-instagram-vancouver-jan2016-averagecolour-colourname.png)):
+* 2\. And here is the output (I used R Studio to make the output PNG 9740 x 6020 px) on flickr (on github: [pdf](https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/naive-density-plot-instagram-vancouver-jan2016-averagecolour-colourname.pdf), [png](https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/naive-density-plot-instagram-vancouver-jan2016-averagecolour-colourname.png)):
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/roland/36563405901/in/dateposted-ff/" title="naive-density-plot-instagram-vancouver-jan2016-averagecolour-colourname"><img src="https://farm5.staticflickr.com/4377/36563405901_ff4aa4bd3f_n.jpg" width="320" height="198" alt="naive-density-plot-instagram-vancouver-jan2016-averagecolour-colourname"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 ## August 7, 2017
