@@ -66,6 +66,9 @@ Output:
 
 <img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/ggplot(singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname%2C%20aes(x%3Dcolourname))%2Bgeom_density(mapping%20%3D%20aes(colour%3D%20colour_named_vector))%2Bscale_colour_manual(values%3Dcolour_named_vector)%20%2B%20theme_void().png">
 
+Zazzle 2100 x 1800 output:
+
+<img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/ig-vancouver-jan2016-average-colour-density-plot-zazzle-2100x1800.png">
 
 ### AES maps but doesn't SET part 8888
 * 1\. AES maps but doesn't SET part 8888 :-) the colour instead it maps the variable, in this case colourname, to a set of levels and the levels are mapped to a default colour palette i.e. the plot shows up not in the colours of colourname but in the default colour palette! Code:
