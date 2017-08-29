@@ -2,6 +2,19 @@
 R stuff for instagram vancouver 2016
 
 ## August 28, 2017
+
+### Remove singleton colournames 
+
+```R
+singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname <-
+average_colour_ig_van_jan2016_colourname %>%
+add_count(colourname) %>%
+filter(n != 1)
+nrow(singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname)
+[1] 146463
+```
+
+### AES maps but doesn't SET part 8888
 * 1\. AES maps but doesn't SET part 8888 :-) the colour instead it maps the variable, in this case colourname, to a set of levels and the levels are mapped to a default colour palette i.e. the plot shows up not in the colours of colourname but in the default colour palette! Code:
 ```
 ggplot(average_colour_ig_van_jan2016_colourname,
