@@ -70,17 +70,6 @@ Zazzle 2100 x 1800 output:
 
 <img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/ig-vancouver-jan2016-average-colour-density-plot-zazzle-2100x1800.png">
 
-
-### AES maps but doesn't SET part 8888
-* 1\. AES maps but doesn't SET part 8888 :-) the colour instead it maps the variable, in this case colourname, to a set of levels and the levels are mapped to a default colour palette i.e. the plot shows up not in the colours of colourname but in the default colour palette! Code:
-```
-ggplot(average_colour_ig_van_jan2016_colourname,
-aes(colourname, colour=colourname)) + geom_density()
-```
-
-And here's how it looks
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/roland/36046136364/in/datetaken/" title="ggplot(average_colour_ig_van_jan2016_colourname, aes(colourname, colour&#x3D;colourname)) + geom_density()-mapping-colourname-instead-of-plotting-colourname"><img src="https://farm5.staticflickr.com/4378/36046136364_6fe52d956e_n.jpg" width="320" height="198" alt="ggplot(average_colour_ig_van_jan2016_colourname, aes(colourname, colour&#x3D;colourname)) + geom_density()-mapping-colourname-instead-of-plotting-colourname"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-
 * 6\. Faceted plot by hour
 
 ```R
@@ -93,12 +82,22 @@ scale_colour_manual(values=colour_named_vector)+
 theme_void()+
 theme(legend.position = 'none')+
 theme(strip.background = element_blank(),strip.text.x = element_blank())+
-facet_wrap(~ hour, nrow = 
+facet_wrap(~ hour, nrow = 2)
 ```
 
 Output:
 
 <img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/hourly-average-colour-ig-van-8192px-wide-density-plot-facet-wrap.png">
+
+### AES maps but doesn't SET part 8888
+* 1\. AES maps but doesn't SET part 8888 :-) the colour instead it maps the variable, in this case colourname, to a set of levels and the levels are mapped to a default colour palette i.e. the plot shows up not in the colours of colourname but in the default colour palette! Code:
+```
+ggplot(average_colour_ig_van_jan2016_colourname,
+aes(colourname, colour=colourname)) + geom_density()
+```
+
+And here's how it looks
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/roland/36046136364/in/datetaken/" title="ggplot(average_colour_ig_van_jan2016_colourname, aes(colourname, colour&#x3D;colourname)) + geom_density()-mapping-colourname-instead-of-plotting-colourname"><img src="https://farm5.staticflickr.com/4378/36046136364_6fe52d956e_n.jpg" width="320" height="198" alt="ggplot(average_colour_ig_van_jan2016_colourname, aes(colourname, colour&#x3D;colourname)) + geom_density()-mapping-colourname-instead-of-plotting-colourname"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 
 ## August 20, 2017
