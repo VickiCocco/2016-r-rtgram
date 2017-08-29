@@ -3,7 +3,7 @@ R stuff for instagram vancouver 2016
 
 ## August 28, 2017
 
-### Remove singleton colournames and plot them
+### Remove singleton colournames and make a colour vector and plot them, need mapping in geom_density using colour vector and colour vector in scale_colour_manual
 
 * 1\. Remove singleton colournames
 ```R
@@ -25,6 +25,31 @@ Result:
 https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/ggplot(singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname%2C%20aes(x%3Dcolourname))%2Bgeom_density().png
 
 <img src="https://github.com/rtanglao/2016-r-rtgram/raw/master/JANUARY2016/ggplot(singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname%2C%20aes(x%3Dcolourname))%2Bgeom_density().png">
+
+* 3\. Make colour vector 
+
+```R
+# Don't need as.character() since it's already a character
+colour_named_vector <- setNames
+(singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname$colourname, singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname$colourname)
+```
+
+* 4\. Successful plot with graph "chrome"
+
+```R
+ggplot(
+singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname, 
+aes(x=colourname))+
+geom_density(mapping = aes(colour= colour_named_vector))+
+scale_colour_manual(values=colour_named_vector)
+```
+
+Output:
+
+<img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/ggplot(singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname%2C%20aes(x%3Dcolourname))%2Bgeom_density(mapping%20%3D%20aes(colour%3D%20colour_named_vector))%2Bscale_colour_manual(values%3Dcolour_named_vector).png">
+
+* 5\. Successful plot without graph "chrome" i.e. theme_void()
+
 
 ### AES maps but doesn't SET part 8888
 * 1\. AES maps but doesn't SET part 8888 :-) the colour instead it maps the variable, in this case colourname, to a set of levels and the levels are mapped to a default colour palette i.e. the plot shows up not in the colours of colourname but in the default colour palette! Code:
