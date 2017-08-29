@@ -22,6 +22,7 @@ geom_density()
 ```
 
 Result:
+
 https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/ggplot(singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname%2C%20aes(x%3Dcolourname))%2Bgeom_density().png
 
 <img src="https://github.com/rtanglao/2016-r-rtgram/raw/master/JANUARY2016/ggplot(singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname%2C%20aes(x%3Dcolourname))%2Bgeom_density().png">
@@ -48,7 +49,22 @@ Output:
 
 <img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/ggplot(singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname%2C%20aes(x%3Dcolourname))%2Bgeom_density(mapping%20%3D%20aes(colour%3D%20colour_named_vector))%2Bscale_colour_manual(values%3Dcolour_named_vector).png">
 
-* 5\. Successful plot without graph "chrome" i.e. theme_void()
+* 5\. Successful plot without graph "chrome" i.e. theme_void() + remove legend
+
+```R
+ggplot(
+singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname,
+aes(x=colourname))+
+geom_density(
+mapping = aes(colour= colour_named_vector))+
+scale_colour_manual(values=colour_named_vector)+
+theme_void()+
+theme(legend.position = 'none')+
+theme(strip.background = element_blank(),strip.text.x = element_blank())
+```
+Output:
+
+<img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/ggplot(singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname%2C%20aes(x%3Dcolourname))%2Bgeom_density(mapping%20%3D%20aes(colour%3D%20colour_named_vector))%2Bscale_colour_manual(values%3Dcolour_named_vector)%20%2B%20theme_void().png">
 
 
 ### AES maps but doesn't SET part 8888
