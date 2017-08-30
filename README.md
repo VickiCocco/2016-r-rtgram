@@ -1,6 +1,23 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## August 29, 2017
+* 1\. simple plot for hour 0 (i.e. 00:00 to 00:59)
+```R
+no00 <- singleton_colours_removed_average_colour_ig_van_jan2016_with_colourname %>%
+filter(hour=="00") %>%
+add_count(colourname) %>%
+filter(nn != 1)
+colour_named_vector <- setNames(no00$colourname, no00$colourname)
+ggplot(no00, aes(x=colourname))+
+  geom_density(mapping = aes(colour= colour_named_vector))+
+  scale_colour_manual(values=colour_named_vector)
+```
+
+Output:
+
+<img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/0:00-0:59-ig-vancouver-january2016-average-colour-density-plot.png">
+
 ## August 28, 2017
 
 ### Remove singleton colournames and make a colour vector and plot them, need mapping in geom_density using colour vector and colour vector in scale_colour_manual and try a faceted plot
