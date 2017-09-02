@@ -1,6 +1,40 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## 2017-09-01
+### Simple density plot for hour 0 i.e. midnight to 12:9a.m. with continuous colours from plotrix i.e. 600 colours
+
+```R
+# use 600 values of 24 bit colour
+library(tidyverse)
+library(plotrix)
+
+getnumericColour <-
+  function(colorname) {
+    colour_matrix=col2rgb(colorname)
+    return(as.numeric(colour_matrix[1,1]) * 65536 +
+             as.numeric(colour_matrix[2,1]) * 256 +
+             as.numeric(colour_matrix[3,1]))
+  }
+csv_url = 
+"https://raw.githubusercontent.com/rtanglao/2016-r-rtgram/master/JANUARY2016/january2016-ig-van-avgcolour-id-mf-month-day-daynum-unixtime-hour-colourname.csv"
+average_colour_ig_van_jan2016 = read_csv(csv_url)
+
+h00_600colours <- average_colour_ig_van_jan2016 %>%
+filter(hour=="00") %>%
+rowwise() %>%
+mutate(sixhundred_colourint = getnumericColour(colourname))
+
+colour_named_vector <- setNames(as.character(h00_600colours$sixhundred_colourint), h00_600colours$sixhundred_colourint)
+
+ggplot(h00_600colours, aes(x=colour))+
+geom_density(mapping = aes(colour= colour_named_vector))+
+scale_colour_manual(values=colour_named_vector)
+```
+
+#### Output:
+<img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/01september2017-ig-van-jan-2016-hour00-600colours.png">
+
 ## August 29, 2017
 * 1\. simple plot for hour 0 (i.e. 00:00 to 00:59)
 ```R
