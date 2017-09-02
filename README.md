@@ -1,8 +1,24 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## 2017-09-02
+
+### Hex Colours + Greater than 5 occurences of colourname + truncate 0.005: Simple density plot for hour 0 i.e. midnight to 12:59a.m. with continuous colours from plotrix i.e. 600 colours
+
+```R
+ggplot(gt5_h00_600colours, aes(x=colour))+
+geom_density(mapping = aes(colour= colour_named_vector))+
+scale_colour_manual(values=colour_named_vector)+
+scale_y_continuous(limits = c(0,0.035))
+```
+
+#### Output
+
+<img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/01september2017-ig-van-jan-2016-gt5-hexcolours-truncate-ylim0-0.035-hour00-600colours.png">
+
+
 ## 2017-09-01
-### Hex Colours + Greater than 5 occurences of colourname: Simple density plot for hour 0 i.e. midnight to 12:9a.m. with continuous colours from plotrix i.e. 600 colours
+### Hex Colours + Greater than 5 occurences of colourname: Simple density plot for hour 0 i.e. midnight to 12:59a.m. with continuous colours from plotrix i.e. 600 colours
 
 ```R
 # use hex colours
