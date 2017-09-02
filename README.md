@@ -2,6 +2,29 @@
 R stuff for instagram vancouver 2016
 
 ## 2017-09-01
+### Greater than 5 occurences of colourname: Simple density plot for hour 0 i.e. midnight to 12:9a.m. with continuous colours from plotrix i.e. 600 colours
+
+```R
+# let's remove <= 5
+gt5_h00_600colours <- average_colour_ig_van_jan2016 %>%
+filter(hour=="00") %>%
+add_count(colourname) %>%
+filter(n >5) %>%
+rowwise() %>%
+mutate(sixhundred_colourint = getnumericColour(colourname))
+
+colour_named_vector <- setNames(as.character(gt5_h00_600colours$sixhundred_colourint), gt5_h00_600colours$sixhundred_colourint)
+
+ggplot(gt5_h00_600colours, aes(x=colour))+
+geom_density(mapping = aes(colour= colour_named_vector))+
+scale_colour_manual(values=colour_named_vector)
+```
+
+#### Output:
+
+<img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/01september2017-ig-van-jan-2016-gt5-hour00-600colours.png">
+
+
 ### Simple density plot for hour 0 i.e. midnight to 12:9a.m. with continuous colours from plotrix i.e. 600 colours
 
 ```R
