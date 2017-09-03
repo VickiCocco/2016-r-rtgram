@@ -1,6 +1,24 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## 2017-09-03
+
+### Chromeless i.e. no legend
+
+```R
+ggplot(gt5_h00_600colours, aes(x=colour))+
+geom_density(mapping = aes(colour= colour_named_vector))+
+scale_colour_manual(values=colour_named_vector)+
+scale_y_continuous(limits = c(0,0.0012))+
+theme_void()+theme(legend.position = 'none') +
+theme(strip.background = element_blank(),strip.text.x = element_blank())
+```
+
+#### Output
+
+<img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/chromeless-01september2017-ig-van-jan-2016-gt5-hexcolours-truncate-ylim0-0.0012-hour00-600colours.png">
+
+
 ## 2017-09-02
 
 ### III. same as II. below but with 0.0012 instead of 0.002
