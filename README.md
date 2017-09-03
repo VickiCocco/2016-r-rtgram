@@ -3,6 +3,10 @@ R stuff for instagram vancouver 2016
 
 ## 2017-09-02
 
+### III. same as II. below but with 0.0012 instead of 0.002
+
+see http://rolandtanglao.com/2017/09/02/p2-0.0012version-is-better-density-plot-corrupted-for-art-copy/
+
 ### II. Hex Colours + Greater than 5 occurences of colourname + truncate 0.002: Simple density plot for hour 0 i.e. midnight to 12:59a.m. with continuous colours from plotrix i.e. 600 colours
 
 ```R
