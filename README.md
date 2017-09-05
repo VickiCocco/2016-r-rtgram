@@ -1,6 +1,12 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## 2017-09-04
+
+### Sucess :-)
+
+See http://rolandtanglao.com/2017/09/04/p2-remove-5-from-each-one-hour-period/
+
 ## 2017-09-03
 
 ### Chromeless i.e. no legend
