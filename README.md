@@ -3,6 +3,22 @@ R stuff for instagram vancouver 2016
 
 ## 2017-09-07
 
+### with colours!
+
+```R
+colour_named_vector <-
+setNames(as.character(average_colour_ig_van_jan2016$colourname), 
+         average_colour_ig_van_jan2016$colourname)
+ggplot(average_colour_ig_van_jan2016,   
+  aes(x=hour, y= colourname , height=..density..))+
+  geom_joy(scale=16, aes(colour=colour_named_vector)) +
+  scale_colour_manual(values=colour_named_vector)
+```
+
+#### Output:
+
+<img src="https://github.com/rtanglao/2016-r-rtgram/blob/master/JANUARY2016/with-colours-07sept207-ggplot-average_colour_ig_van_jan2016-aes-x-hour-y-colourname-geom_joy-scale-16.png">
+
 ### average colour instagram vancouver jauary 2016 aes-x-hour-y-colourname, geom_joy-scale16
 
 ```R
