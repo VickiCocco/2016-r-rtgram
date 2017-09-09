@@ -1,6 +1,9 @@
 # 2016-r-rtgram
 R stuff for instagram vancouver 2016
 
+## 2017-09-08
+See http://rolandtanglao.com/2017/09/08/p1-faceted-r-ggjoy-joyplot-with-colours-and-fill-colour/ 
+
 ## 2017-09-07
 
 ### with colours!
