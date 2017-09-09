@@ -29,9 +29,9 @@ main <- function() {
   
   ggsave(filename,
          p,
-         width = 29.166666667,
-         height = 25,
-         dpi = 72,
+         width = 14,
+         height = 12,
+         dpi = 150,
          limitsize = FALSE) #multiply height and width by dpi to get px
   
 }
