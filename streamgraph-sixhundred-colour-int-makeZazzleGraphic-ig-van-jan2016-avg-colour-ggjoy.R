@@ -47,20 +47,36 @@ colour_named_vector <-
 ##   streamgraph("sixhundred_colourint", "n", "date", interactive=FALSE) %>% 
 ##     sg_fill_manual(values=colour_named_vector)
 
- # from https://github.com/timelyportfolio/exportwidget
+ # from https://github.com/timelyportfolio/exportwidget the following also works
+    ## html_print(
+    ##     tagList(
+    ##         streamgraph( groupedby_date_sixhundred_colourint,
+    ##                     "sixhundred_colourint", "n", "date",
+    ##                     interactive=FALSE) %>% 
+    ##     sg_fill_manual(values=colour_named_vector)
+    ##    ,export_widget()
+    ## )) %>%
+    ##     normalizePath(.,winslash="/") %>%
+    ##     gsub(x=.,pattern = ":/",replacement="://") %>%
+    ##     paste0("file:///",.) %>%
+    ##     webshot( file = "stream_screen.png", delay = 10 )
+    # END of working
+
+  # from http://www.buildingwidgets.com/blog/2015/4/9/week-14-exporting-widget
+    
     html_print(
-        tagList(
             streamgraph( groupedby_date_sixhundred_colourint,
                         "sixhundred_colourint", "n", "date",
                         interactive=FALSE) %>% 
-        sg_fill_manual(values=colour_named_vector)
-       ,export_widget()
-    )) %>%
+            sg_fill_manual(values=colour_named_vector),
+        viewer = NULL
+       
+    ) %>%
         normalizePath(.,winslash="/") %>%
         gsub(x=.,pattern = ":/",replacement="://") %>%
         paste0("file:///",.) %>%
-        webshot( file = "stream_screen.png", delay = 10 )
-
+        webshot( file = "headless-streamgraph.png", delay = 10 )  
+# 
 #saveWidget(sg, "test.html", selfcontained = TRUE) # <- works!
 }
 sink("log.txt")
