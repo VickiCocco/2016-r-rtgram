@@ -58,7 +58,7 @@ html_print(
     webshot(
         file = "artofwhere-headless-streamgraph.png", delay = 10,
         selector = ".streamgraph",
-        zoom = 8
+        zoom = 8 # https://www.rdocumentation.org/packages/webshot/versions/0.4.1
         )  
 }
 sink("log.txt")
