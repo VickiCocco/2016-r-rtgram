@@ -56,7 +56,7 @@ html_print(
     gsub(x=.,pattern = ":/",replacement="://") %>%
     paste0("file:///",.) %>%
     webshot(
-        file = "artofwhere-headless-streamgraph.png", delay = 10,
+        file = "8x-zoom-artofwhere-headless-streamgraph.png", delay = 10,
         selector = ".streamgraph",
         zoom = 8 # https://www.rdocumentation.org/packages/webshot/versions/0.4.1
         )  
